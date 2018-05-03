@@ -52,6 +52,6 @@ def get_quantizer(bitW, bitA):
     def fa(x):
         if bitA == 32:
             return x
-        return 2 * quantize(x, bitA) - 1
+        return quantize(x, bitA)
 
     return fw, fa
